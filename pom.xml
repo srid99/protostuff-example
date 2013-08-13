@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>in.srid.serialization</groupId>
-	<artifactId>jvm-serialization-benchmark</artifactId>
+	<artifactId>protostuff-example</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
