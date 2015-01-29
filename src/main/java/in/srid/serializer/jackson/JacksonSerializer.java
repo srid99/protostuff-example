@@ -33,7 +33,7 @@ public class JacksonSerializer implements Serializer, Deserializer {
             return mapper.readValue( bytes, clazz );
         }
         catch ( final IOException e ) {
-            throw new IllegalStateException( e.getMessage() , e );
+            throw new IllegalStateException( e );
         }
     }
 
@@ -43,7 +43,7 @@ public class JacksonSerializer implements Serializer, Deserializer {
             return mapper.writeValueAsBytes( source );
         }
         catch ( final IOException e ) {
-            throw new IllegalStateException( e.getMessage() , e );
+            throw new IllegalStateException( e );
         }
     }
 }

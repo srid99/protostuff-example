@@ -36,7 +36,7 @@ public abstract class AbstractProtoSerializer implements Serializer, Deserialize
             return serializeInternal( source, schema, buffer );
         }
         catch ( final Exception e ) {
-            throw new IllegalStateException( e.getMessage() , e );
+            throw new IllegalStateException( e );
         }
         finally {
             buffer.clear();
@@ -51,7 +51,7 @@ public abstract class AbstractProtoSerializer implements Serializer, Deserialize
             return deserializeInternal( bytes, result, SchemaUtils.getSchema( clazz ) );
         }
         catch ( final Exception e ) {
-            throw new IllegalStateException( e.getMessage() , e );
+            throw new IllegalStateException( e );
         }
     }
 

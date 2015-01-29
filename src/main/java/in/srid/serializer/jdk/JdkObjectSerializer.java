@@ -36,17 +36,17 @@ public class JdkObjectSerializer implements Serializer, Deserializer {
             return clazz.cast( obj );
         }
         catch ( final ClassNotFoundException e ) {
-            throw new IllegalStateException( e.getMessage() , e );
+            throw new IllegalStateException( e );
         }
         catch ( final IOException e ) {
-            throw new IllegalStateException( e.getMessage() , e );
+            throw new IllegalStateException( e );
         }
         finally {
             try {
                 in.close();
             }
             catch ( final IOException e ) {
-                throw new IllegalStateException( e.getMessage() , e );
+                throw new IllegalStateException( e );
             }
         }
     }
@@ -61,14 +61,14 @@ public class JdkObjectSerializer implements Serializer, Deserializer {
             oos.flush();
         }
         catch ( final IOException e ) {
-            throw new IllegalStateException( e.getMessage() , e );
+            throw new IllegalStateException( e );
         }
         finally {
             try {
                 out.close();
             }
             catch ( final IOException e ) {
-                throw new IllegalStateException( e.getMessage() , e );
+                throw new IllegalStateException( e );
             }
         }
 
