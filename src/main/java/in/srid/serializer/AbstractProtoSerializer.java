@@ -16,11 +16,10 @@
 
 package in.srid.serializer;
 
+import io.protostuff.LinkedBuffer;
+import io.protostuff.Schema;
 import org.objenesis.Objenesis;
 import org.objenesis.ObjenesisStd;
-
-import com.dyuproject.protostuff.LinkedBuffer;
-import com.dyuproject.protostuff.Schema;
 
 public abstract class AbstractProtoSerializer implements Serializer, Deserializer {
 
@@ -55,7 +54,7 @@ public abstract class AbstractProtoSerializer implements Serializer, Deserialize
         }
     }
 
-    public abstract <T> byte[] serializeInternal( final T source , final Schema<T> schema , final LinkedBuffer buffer );
+    protected abstract <T> byte[] serializeInternal(final T source, final Schema<T> schema, final LinkedBuffer buffer);
 
-    public abstract <T> T deserializeInternal( final byte[] bytes , final T result , final Schema<T> schema );
+    protected abstract <T> T deserializeInternal(final byte[] bytes, final T result, final Schema<T> schema);
 }

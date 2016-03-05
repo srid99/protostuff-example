@@ -17,10 +17,9 @@
 package in.srid.serializer.protostuff;
 
 import in.srid.serializer.AbstractProtoSerializer;
-
-import com.dyuproject.protostuff.LinkedBuffer;
-import com.dyuproject.protostuff.ProtostuffIOUtil;
-import com.dyuproject.protostuff.Schema;
+import io.protostuff.LinkedBuffer;
+import io.protostuff.ProtostuffIOUtil;
+import io.protostuff.Schema;
 
 public class ProtostuffSerializer extends AbstractProtoSerializer {
 
